@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+button{
+	cursor: pointer;
+	border: none;
+	transition: .4s;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+	transition: .4s;
+}
+
+ul li{
+  list-style: none;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+
+/*.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}*/
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+  background-image: url(../img/fon.jpg);
+  z-index: 999;
+  opacity: .9;
+}
+
+#yesButton{
+  margin-top: 20px ;
+  margin-right: 70px ;
+}
+
+#yesButton,#noButton{
+  font-size: 20px;
+  background-color: inherit;
+  color: #fff;
+}
+    
+input[type="range"] {
+  width: 200px;
+}
+
+body {
+	background-image: url(../img/background.jpg);
+	color: #D3D3D3;
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+}
+
+#header-section{
+	padding: 20px 0;
+	height: 70px;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 600;
+	font-size: 22px;
+	margin: 0 auto;
+}
+
+.nav-main-list{
+	display: flex;
+	gap: 60px;
+	margin: 30px 0;
+}
+
+.nav-main__link:hover{
+	color: purple;
+}
+
+.nav-main__link:hover:before{
+	transform: scaleX(1);
+	transition: transform 0.25s;
+	transform-origin: right;
+}
+
+.nav-main__link{
+	position: relative;
+}
+
+.nav-main__link:before{
+	content: '';
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	background-color: purple;
+	left: 0; bottom: -5px;
+	transform: scaleX(0);
+}
+
+.btn-primary{
+	background: transparent;
+	padding: 15px;
+	margin-top: 15px;
+	border: 1px solid #9932a8;
+	border-radius: 10px;
+}
+
+.btn-primary:hover{
+	border-radius: 15px;
+	color: #df5af2;
+}
+
+.hero {
+	width: calc(var(--index) * 36);
+	position: absolute;
+	left: 50vw;
+	top: 15vh;
+	z-index: -1;
+}
+
+.main-header {
+	height: 100vh;
+}
+
+.container {
+	padding: 0 7vw;
+	max-width: 100%;
+}
+
+.main-title {
+	font-size: calc(var(--index) * 5);
+	width: min-content;
+	margin-top: 25%;
+	line-height: .9;
+}
+
+.text-animation {
+  position: absolute;
+  max-width: 370px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 40px;
+  background-color: #000;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.typed-text{
+  font-size: 35px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; 
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.line {
+  width: 40%; 
+  height: 1px; 
+  background-color: #D3D3D3; 
+  opacity: 0.5;
+}
+
+.circle {
+	width: 1.4vh;
+	height:  1.4vh;
+	margin: 0 10px;
+  border: 1px solid #D3D3D3;
+  border-radius: 50%;
+  background-color: transparent; 
+}
+
+.rectangle {
+  width: 15%; 
+  height: 10px; 
+  border: 1px solid #D3D3D3;
+  border-radius: 20px; 
+  background-color: transparent; 
+}
+
+.About-us{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 80px;
+	padding-top: 100px;
+}
+
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 8) 0;
+	padding-top: 0 ;
+}
+
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
+}
+
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+}
+
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+
+.text-block__p {
+	line-height: 1.75;
+}
+
+.gallery6{
+	width: 400px;
+}
+
+.tokenomics{
+	padding: 1px 0 200px;
+}
+
+.tokenomics-block1 {
+  float: left;
+  width: 49%;
+  height: 964px; 
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 50px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.tokenomics-element{
+	text-align: center;
+	font-size: 50px;
+
+}
+
+.tokenomics-description{
+	text-align: center;
+	font-size: 40px;
+
+}
+
+.tokenomics-block2 {
+  float: right;
+  width: 49%;
+  height: 300px; 
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.tokenomics-block3 {
+  float: right;
+  width: 49%;
+  height: 300px; 
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.tokenomics-block4 {
+  float: right;
+  width: 49%;
+  height: 300px; 
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
+}
+
+.tokenomics-image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.tokenomics-image img {
+  max-width: 120%;
+  max-height: 120%;
+}
+
+.wert{
+	padding-bottom: 120px;
+}
+
+.tokenomics-title{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.footer {
+  padding-bottom: 100px;
+}
+
+.footer-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.social-menu {
+  text-align: center;
+}
+
+.social-menu ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.social-menu ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.social-menu ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  transition: .5s;
+}
+
+.social-menu ul li .fa:hover {
+  color: #ffffff;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+  transform: translate(0, 0px);
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social-menu ul li a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #0077B5;
+}
+
+
+/*.scroll-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}*/
+
+/*.media-hero {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/kurtizanka.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}*/
+@media screen and (max-width: 775px) {
+/*	.main-title {
+		font-size: calc(var(--index) * 4);
+		width: 100%;
+		margin-top: 10%;
+	}*/
+	.text-block__h{
+		font-size: 14px;
+	}
+	/*.text-animation {
+		width: 100%;
+	}*/
+	.gallery {
+		flex-direction: column;
+	}
+
+	.gallery__left,
+	.gallery__right {
+		width: 100%;
+	}
+
+	.gallery__item {
+		width: 100%;
+		height: auto;
+	}
+
+	.gallery6 {
+		margin-bottom: 30px;
+	}
+
+	.tokenomics {
+		flex-direction: column;
+	}
+
+	.tokenomics-block1{
+		height: 40%;
+	}
+	.tokenomics-description{
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.footer-title {
+		font-size: 24px;
+	}
+
+	.social-menu ul {
+		padding: 0;
+	}
+
+	.social-menu ul li {
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 1149px) {
+	.main-header{
+		padding-top: 50px ;
+	}
+	.tokenomics-block1,
+	.tokenomics-block2,
+	.tokenomics-block3,
+	.tokenomics-block4 {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1062px) {
+	.text-block__h{
+		padding: 0 30px;	
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	.tokenomics-title, .About-us{
+		font-size: 23px;
+	}
+	.media-hero {
+    width: 150px; /* Зменшено розмір на половину */
+    height: 150px; /* Зменшено розмір на половину */
+}
+
+@media screen and (max-width: 1100px) {
+  .hero {
+    display: none;
+  }
+  .media-hero__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin: 100px 0;
+}
+
+.media-hero {
+	  display: flex;
+	  width: 600px;
+	  height: 600px;
+	  background-image: url("../img/kurtizanka.png");
+	  background-size: cover;
+	}
+	@media screen and (max-width: 1100px) {
+  .hero {
+    display: none;
+  }
+  .media-hero__wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 200px 0;
+  }
+
+  .media-hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 600px;
+    height: 600px;
+    background-image: url("../img/kurtizanka.png");
+    background-size: cover;
+  }
+}

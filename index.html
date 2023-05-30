@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=5.0">
+	<title>Kurtizanka Inu</title>
+	<link rel="icon" href="img/гордон1.png" type="image/x-icon">
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="https://kit.fontawesome.com/168fcb12e1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+	<div class="popup" id="popup">
+	    <h2>Do you want to play music?</h2>
+	    <button id="yesButton">Yes</button>
+	    <button id="noButton">No</button>
+	    <br>
+	    <input type="range" id="volumeSlider" min="0" max="100" step="1" value="50">
+  	</div>
+  	<audio id="music" src="Lipsi-HA.mp3" loop></audio>
+	<div class="wrapper">
+		<div class="content">
+			<div class="container">
+				<div class="header">
+					<!-- <nav class="nav-main">
+						<ul class="nav-main-list">
+							<li class="nav-main__item">
+								<a class="nav-main__link" href="#">Home</a>
+							</li>
+							<li class="nav-main__item">
+								<a class="nav-main__link" href="#About-us">About Us</a>
+							</li>
+							<li class="nav-main__item">
+								<a class="nav-main__link" href="#">Tokenomics</a>
+							</li>
+							<li class="nav-main__item">
+								<a class="nav-main__link" href="#">Social</a>
+							</li>
+						</ul>
+					</nav> -->
+					<a class="btn-primary" href="#">Buy now</a>
+				</div>
+			</div>
+				<header class="hero-section">
+					<div class="hero-wrapper">
+						<img data-speed=".6" class="hero" src="img/kurtizanka.png" alt="Alt">
+						<div class="media-hero__wrap">
+							<div class="media-hero"></div>
+						</div>
+					</div>
+					<div class="container">
+						<div data-speed=".75" class="main-header">
+							<h1 class="main-title">Kurtizanka inu</h1>
+							<div class="text-animation">
+							    <span class="typed-text"></span>
+							    <span class="cursor"></span>
+					      	</div>
+						</div>
+					</div>
+				</header>
+			<div class="separator">
+			  	<div class="line"></div>
+			  	<div class="circle"></div>
+			  	<div class="rectangle"></div>
+			  	<div class="circle"></div>
+			  	<div class="line"></div>
+			</div>
+			<div class="portfolio">
+				<div class="container">
+					<div data-speed=".9">
+						<h1 class="About-us" id="About-us">About Us</h1>
+					</div>	
+					<main class="gallery">
+						<div data-speed=".9" class="gallery__left">
+							<img class="gallery__item" src="img/work/1.jpg" alt="Alt">
+							<img class="gallery__item" src="img/work/2.jpg" alt="Alt">
+							<div class="text-block gallery__item">
+								<h3 class="text-block__h">There were two businessmen named Gordon and Nikoglai. They were very smart and brilliant people who were always looking for new ways to make money.
+								One day, sitting on a bench near the entrance, they decided to create their own token, a real meme that could attract buyers from around the world. </h3>
+							</div>
+							<img class="gallery__item gallery6" src="img/work/6.jpg" alt="Alt" style="width: ;">
+						</div>
+						<div data-speed="1.1" class="gallery__right">
+							<div class="text-block gallery__item">
+								<h3 class="text-block__h">Gordon was a reputable coder, and knew all about how to create and run a token. Nicoglai, haipolog in life, marketing, and advertising - his middle name, he knows how to attract attention! 
+								They sat down and started working on the token, the courtesan everyone loves. After all, they understand that this is their fairy tale and their story. Get ready, we here will make a bomba bompastik.</h3>
+							</div>
+							<img class="gallery__item" src="img/work/4.jpg" alt="Alt">
+							<img class="gallery__item" src="img/work/5.jpg" alt="Alt">
+							<img class="gallery__item" src="img/work/3.jpg" alt="Alt">
+						</div>
+					</main>
+				</div>	
+				<div class="separator">
+				  	<div class="line"></div>
+				  	<div class="circle"></div>
+				  	<div class="rectangle"></div>
+				  	<div class="circle"></div>
+				  	<div class="line"></div>
+				</div>
+				<div class="container">
+					<div class="tokenomics-title">
+						<h1>Our Tokenomics</h1>
+					</div>
+					<div class="tokenomics">
+						<div class="tokenomics-block1">
+							<div class="tokenomics-element">Total Supply</div>
+						  	<div class="tokenomics-description wert">100,000 Kurtizanka Inu</div>
+						  	<div class="tokenomics-image">
+						    	<img src="img/гордон1.png" alt="Гордон 1">
+						  	</div>
+						</div>
+						<div class="tokenomics-block2">
+						  	<div class="tokenomics-element">Total Security</div>
+							<div class="tokenomics-description">Locked liquidity</div>
+				  			<div class="tokenomics-description">Renounce ownership</div>
+						</div>
+						<div class="tokenomics-block3">
+						  	<div class="tokenomics-element">Buy Tax</div>
+							<div class="tokenomics-description">1% liquidity</div>
+						  	<div class="tokenomics-description">3% Buyback</div>
+						  	<div class="tokenomics-description">4% Marketing</div>
+							<div class="tokenomics-description">3% Team</div>
+						</div>
+						<div class="tokenomics-block4">
+					  		<div class="tokenomics-element">Sell Tax</div>
+					  		<div class="tokenomics-description">1% liquidity</div>
+					  		<div class="tokenomics-description">3% Buyback</div>
+					  		<div class="tokenomics-description">4% Marketing</div>
+						  	<div class="tokenomics-description">3% Team</div>
+						</div>
+					</div>
+				</div>
+				<div class="separator">
+				  	<div class="line"></div>
+				  	<div class="circle"></div>
+				  	<div class="rectangle"></div>
+				  	<div class="circle"></div>
+				  	<div class="line"></div>
+				</div>
+					<footer id="footer">
+						<div class="footer">
+							<div class="container">
+								<h1 class="footer-title">Contact Us</h1>
+								<div class="social-menu">
+								  	<ul>
+								  		<li><a target="_blank" href="https://t.me/FairyTaIe0" title="Channel"><i class="fa fa-brands fa-telegram "></i></a></li>
+										<li><a target="_blank" href="https://t.me/FairyTaleEN" title="Chat En"><i class="fa fa-brands fa-telegram" style="color: #9f3888;"></i></a></li>
+									    <li><a target="_blank" href="https://t.me/FairyTaleCIS" title="Chat CIS"><i class="fa fa-brands fa-telegram" style="color: #ee7cd5;" ></i></a></li>
+									    <li><a target="_blank" href="http://kurtizamkainu.medium.com" title="Medium"><i class="fa fa-brands fa-medium"></i></a></li>
+									    <li><a target="_blank" title="Twitter" href="https://twitter.com/FairyTale0080"><i class="fa fa-brands fa-twitter"></i></a></li>
+								  	</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
